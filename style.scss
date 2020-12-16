@@ -1,0 +1,33 @@
+body {
+	background-color: #f5dcfd;
+
+	#root {
+		h1, 
+		p {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-family: 'Roboto', sans-serif;
+			font-size: 48px;
+			color: #392157;
+		}
+		&.clicked {
+			h1 {
+				animation:  right 5s infinite reverse;
+			}
+			
+			p {
+				animation:  right 5s infinite;
+			}
+			@keyframes right {
+				0% {
+					transform: rotate(0) translate(-50%, -50%);
+				}
+				100% {
+					transform: rotate(360deg) translate(-50%, -50%);
+				}
+			}
+		}
+	}
+}
